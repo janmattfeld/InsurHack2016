@@ -183,3 +183,6 @@ footer .material-icons {
 .package_description {
 
 }
+#notified {
+    display: none;
+}
