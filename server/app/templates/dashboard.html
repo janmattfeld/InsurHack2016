@@ -61,15 +61,14 @@
 <div id="dashboard-content" class="container section">
 
         <div class="row">
+            <div class="col s12">
 
-            <div class="col s12 m12 l4">
-                <div class="row">
-                    <div class="col s12">
-
-                        <div class="card" style="height: 622.5px;">
-                            <div class="card-content">
+                <div class="card">
+                    <div class="card-content row">
+                        <div class="row">
+                            <div class="col s12 l6">
                                 <table>
-                                    <!-- Stats -->
+                                    <!-- User Profile -->
                                     <thead>
                                     <tr>
                                         <th><span class="card-title truncate primary-color-text">Isolde Storch</span></th>
@@ -85,7 +84,11 @@
                                         <td>12:31 - 02.10.16</td>
                                     </tr>
                                     </tbody>
+                                </table>
+                            </div>
 
+                            <div class="col s12 l6">
+                                <table>
                                     <!-- Devices -->
                                     <thead>
                                     <tr>
@@ -115,18 +118,6 @@
                                     </tr>
                                     </tbody>
 
-                                    <!-- Devices -->
-                                    <thead>
-                                    <tr>
-                                        <th><span class="card-title truncate primary-color-text">Services</span></th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td><a href="#!">Safe Fall</a></td>
-                                    </tr>
-                                    </tbody>
-
                                 </table>
                             </div>
                         </div>
@@ -134,75 +125,70 @@
                 </div>
             </div>
 
-            <div class="col s12 m12 l8">
-                <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <table>
+                            <!-- Stats -->
+                            <thead>
+                            <tr>
+                                <th><span class="card-title truncate primary-color-text">Connected Members</span></th>
+                                <th class="center"><i class="material-icons valign tiny">email</i></th>
+                                <th class="center"><i class="material-icons valign tiny">phone</i></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Robert Strolch</td>
+                                <td class="center">robert.strolch@email.de</td>
+                                <td class="center">+49 (0)1776-987424</td>
+                            </tr>
+                            <tr>
+                                <td>Dr. Marvin Strolch</td>
+                                <td class="center">marvin.dr@gmail.de</td>
+                                <td class="center">+49 (0)1776-987424</td>
+                            </tr>
+                            </tbody>
 
-                    <div class="col s12">
-                        <div class="card">
-                            <div class="card-content">
-                                <table>
-                                    <!-- Stats -->
-                                    <thead>
-                                    <tr>
-                                        <th><span class="card-title truncate primary-color-text">Connected Members</span></th>
-                                        <th class="center"><i class="material-icons valign tiny">email</i></th>
-                                        <th class="center"><i class="material-icons valign tiny">phone</i></th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>Robert Stark</td>
-                                        <td>robert@email.de</td>
-                                        <td>+49 (0)1776-987424</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Marvin Gorecki</td>
-                                        <td>robert@email.de</td>
-                                        <td>+49 (0)1776-987424</td>
-                                    </tr>
-                                    </tbody>
-
-                                </table>
-                            </div>
-                        </div>
+                        </table>
                     </div>
+                </div>
+            </div>
 
 
-                    <div class="col s12">
-                        <div class="card">
-                            <div class="card-content">
-                                <table>
-                                    <!-- Stats -->
-                                    <thead>
-                                    <tr>
-                                        <th><span class="card-title truncate primary-color-text">Insurance Packages</span></th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr style="width: 90%    ">
-                                        <!--<td style="width: 30%"><img class=" package" src="{{ url_for('static', filename='images/car_insurance.svg') }}">
-                                            <h6 class="center-align">Car Insurance</h6></td> -->
-                                        <td style="width: 50%"><img class=" package" src="{{ url_for('static', filename='images/life_insurance.jpg') }}">
-                                            <h6 class="center-align">Life Insurance</h6></td>
-                                        <td style="width: 50%"><img class=" package" src="{{ url_for('static', filename='images/accident_insurance.png') }}">
-                                            <h6 class="center-align">Accident Insurance</h6></td>
-                                    </tr>
-                                    </tbody>
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <table>
+                            <!-- Stats -->
+                            <thead>
+                            <tr>
+                                <th><span class="card-title truncate primary-color-text">Insurance Packages</span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr style="width: 90%    ">
+                                <!--<td style="width: 30%"><img class=" package" src="{{ url_for('static', filename='images/car_insurance.svg') }}">
+                                    <h6 class="center-align">Car Insurance</h6></td> -->
+                                <td style="width: 50%"><img class=" package" src="{{ url_for('static', filename='images/life_insurance.jpg') }}">
+                                    <h6 class="center-align">Life Insurance</h6></td>
+                                <td style="width: 50%"><img class=" package" src="{{ url_for('static', filename='images/accident_insurance.png') }}">
+                                    <h6 class="center-align">Accident Insurance</h6></td>
+                            </tr>
+                            </tbody>
 
-                                </table>
-                            </div>
-                        </div>
+                        </table>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Bins -->
-                    <div class="col s12">
-                        <div id="bin-container" class="card small">
-                            <div class="card-content">
-                                <span class="card-title truncate">Past Days</span>
-                                <div id="cards-container" style="height:200px; margin-top: 5px;">
+            <!-- Bins -->
+            <div class="col s12">
+                <div id="bin-container" class="card small">
+                    <div class="card-content">
+                        <span class="card-title truncate">Past Days</span>
+                        <div id="cards-container" style="height:200px; margin-top: 5px;">
 
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
