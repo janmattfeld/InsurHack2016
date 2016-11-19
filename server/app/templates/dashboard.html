@@ -248,8 +248,6 @@ $(document).ready(function() {
     }, 2000);
     })();
 });
-</script>
-<script>
 function updateNotifyModal() {
     setTimeout(function(){
         $('#notifying-services').replaceWith($('#notified-services'));
@@ -265,6 +263,15 @@ function updateNotifyModal() {
     },
         5000
     );
+};
+
+window.onkeydown = function (e) {
+    var code = e.keyCode ? e.keyCode : e.which;
+    console.log(code)
+    if (code === 77) { //up key
+        $('#effect-14').niftyModal('show');
+        updateNotifyModal();
+};
 };
 </script>
 {% endblock %}
