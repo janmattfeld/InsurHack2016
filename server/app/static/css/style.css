@@ -173,3 +173,8 @@ footer .material-icons {
 #dashboard-content .card a {
     color: black;
 }
+
+#notified {
+    display: none;
+}
+
