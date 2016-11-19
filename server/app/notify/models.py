@@ -8,7 +8,7 @@ class Notification(Base):
 
     id = db.Column(db.Integer(), unique=True, primary_key=True)
     notification_key = db.Column(db.Integer())
-    customer = db.Column(db.Integer(), db.ForeignKey('customer.id'))
+    customer = db.Column(db.Integer(), db.ForeignKey('customer.customer_id'))
 
     def __init__(self, not_key, customer_id):
         self.notification_key = not_key

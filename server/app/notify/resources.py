@@ -43,6 +43,6 @@ class Notification(Resource):
         return {}, 200
 
     def __ensure_customer_existence(self, cust_id):
-        return True if Customer.query.filter_by(id=cust_id) else False
+        return True if Customer.query.filter_by(customer_id=cust_id).all() else False
 
 api.add_resource(Notification, '/')
