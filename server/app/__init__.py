@@ -1,11 +1,7 @@
 import flask
 from flask.ext.sqlalchemy import SQLAlchemy
-from flask_restful import Api
-from flask.ext.restful import abort
 from flask.ext.migrate import Migrate
 from flask.ext.cors import CORS
-
-from config import DASHBOARD_ROOT
 
 app = flask.Flask(__name__)
 app.config.from_object('config')
