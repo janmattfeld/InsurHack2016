@@ -1,6 +1,7 @@
 package net.steppschuh.insurhack;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Handler;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
@@ -111,6 +112,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void userNeedsHelp() {
         Log.d(TAG, "User needs help. Jay.");
+        Intent intent = new Intent(getApplicationContext(), ContactActivity.class);
+        finish();
+        startActivity(intent);
     }
 
 }
