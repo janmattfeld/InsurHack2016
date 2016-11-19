@@ -163,7 +163,7 @@
             <div class="col s12">
                 <div class="card">
                     <div class="card-content">
-                        <table>
+                        <table id="insrance-table">
                             <!-- Stats -->
                             <thead>
                             <tr>
@@ -171,13 +171,21 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr style="width: 90%    ">
-                                <!--<td style="width: 30%"><img class=" package" src="{{ url_for('static', filename='images/car_insurance.svg') }}">
-                                    <h6 class="center-align">Car Insurance</h6></td> -->
-                                <td style="width: 50%"><img class=" package" src="{{ url_for('static', filename='images/life_insurance.jpg') }}">
-                                    <h6 class="center-align">Life Insurance</h6></td>
-                                <td style="width: 50%"><img class=" package" src="{{ url_for('static', filename='images/accident_insurance.png') }}">
-                                    <h6 class="center-align">Accident Insurance</h6></td>
+                            <tr>
+                                <td align="valign-wrapper">
+                                    <img class="valign" src="{{ url_for('static', filename='images/life_insurance.jpg') }}">
+                                </td>
+                                <td align="center">
+                                    <img src="{{ url_for('static', filename='images/accident_insurance.png') }}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4 class="center-align">Life Insurance</h4>
+                                </td>
+                                <td>
+                                    <h4 class="center-align">Accident Insurance</h4>
+                                </td>
                             </tr>
                             </tbody>
 

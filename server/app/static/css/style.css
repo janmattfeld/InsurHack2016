@@ -204,6 +204,10 @@ footer .material-icons {
 
 /* Package icons */
 .package {
+    width: 50%;
+}
+
+#insrance-table {
     width: 100%;
-    display: block;
+    table-layout: fixed;
 }
