@@ -21,6 +21,7 @@ def not_found(error):
 from app.blog.resources import blog_bp
 from app.auth.resources import auth_bp
 from app.pages.resources import page_bp
+from app.notify.resources import notify_bp
 
 app.register_blueprint(
     blog_bp,
@@ -35,4 +36,9 @@ app.register_blueprint(
 app.register_blueprint(
     page_bp,
     url_prefix='/page'
+)
+
+app.register_blueprint(
+    notify_bp,
+    url_prefix='/notify'
 )
