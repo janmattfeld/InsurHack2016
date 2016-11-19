@@ -24,7 +24,7 @@ public class ContactActivity extends AppCompatActivity {
     private static final String NOTIFY_URL = "https://maker.ifttt.com/trigger/sms/with/key/pl40lZkLpcKWgD97XtCfqnsIpvspHb9G_QpfKqToC3n";
 
     private static final long MINIMUM_DELAY = TimeUnit.SECONDS.toMillis(1);
-    private static final long MAXIMUM_DELAY = TimeUnit.SECONDS.toMillis(4);
+    private static final long MAXIMUM_DELAY = TimeUnit.SECONDS.toMillis(3);
 
     private TextView headingTextView;
     private TextView descriptionTextView;

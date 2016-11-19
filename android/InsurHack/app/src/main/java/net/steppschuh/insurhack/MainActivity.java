@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void userIsFine() {
         Log.d(TAG, "User is fine. Meh.");
+        finish();
     }
 
     private void userNeedsHelp() {
