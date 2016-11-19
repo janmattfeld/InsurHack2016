@@ -71,17 +71,21 @@
                                     <!-- User Profile -->
                                     <thead>
                                     <tr>
-                                        <th><span class="card-title truncate primary-color-text">Isolde Storch</span></th>
+                                        <th><span class="card-title truncate primary-color-text">{{customer.AccountHolderContact.AccountName}}</span></th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
+                                        <td>Date of birth</td>
+                                        <td>{{customer.AccountHolderContact.DateOfBirth}}</td>
+                                    </tr>
+                                    <tr>
                                         <td>Customer since</td>
-                                        <td></td>
+                                        <td>{{customer.AccountHolderContact.CreateTime}}</td>
                                     </tr>
                                     <tr>
                                         <td>Last update</td>
-                                        <td>12:31 - 02.10.16</td>
+                                        <td>2016-11-20</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -139,14 +143,14 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td>Robert Strolch</td>
-                                <td class="center">robert.strolch@email.de</td>
+                                <td>Robert Peters</td>
+                                <td class="center">robert.peters@email.de</td>
                                 <td class="center">+49 (0)1776-987424</td>
                             </tr>
                             <tr>
                                 <td>Dr. Marvin Strolch</td>
                                 <td class="center">marvin.dr@gmail.de</td>
-                                <td class="center">+49 (0)1776-987424</td>
+                                <td class="center">+49 (0)1775-987415</td>
                             </tr>
                             </tbody>
 
@@ -199,7 +203,7 @@
 
 {% block login_header %}
     <ul class="right hide-on-med-and-down">
-        <li><a class="modal-trigger valign-wrapper" href="#signout-modal">Isolde Storch
+        <li><a class="modal-trigger valign-wrapper" href="#signout-modal">{{customer.AccountHolderContact.AccountName}}
             <img class="circle" src="{{ url_for('static', filename='images/isolde-profilbild.png') }}" alt="Profile Pic"></a>
         </li>
     </ul>
@@ -252,7 +256,7 @@ function updateNotifyModal() {
     setTimeout(function(){
         $('#notifying-services').replaceWith($('#notified-services'));
         $('#notified-services').show();
-        
+
     },
         3000
     );
