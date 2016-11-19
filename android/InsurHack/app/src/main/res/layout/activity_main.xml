@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:gravity="center"
         android:textColor="@android:color/primary_text_light"
         android:textSize="30sp"
@@ -59,21 +59,22 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/descriptionTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:text="If you don\'t respond in time, we\'ll assume you need help and get in touch with your emergency contacts." />
-
-    <TextView
         android:id="@+id/countdownTextView"
         style="@style/Base.TextAppearance.AppCompat.Headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/descriptionTextView"
+        android:layout_below="@id/buttonContainerLayout"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
         android:layout_marginBottom="16dp"
         android:text="15" />
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countdownTextView"
+        android:gravity="center"
+        android:text="If you don\'t respond in time, we\'ll assume you need help and get in touch with your emergency contacts." />
 
 </RelativeLayout>
