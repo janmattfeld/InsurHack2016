@@ -17,6 +17,10 @@ main {
     opacity: 0.98;
 }
 
+nav .brand-logo {
+    float: left;
+}
+
 #navbar-logo {
     height: 48px;
     margin-top: 4px;

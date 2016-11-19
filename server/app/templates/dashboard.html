@@ -185,31 +185,15 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Bins -->
-            <div class="col s12">
-                <div id="bin-container" class="card small">
-                    <div class="card-content">
-                        <span class="card-title truncate">Past Days</span>
-                        <div id="cards-container" style="height:200px; margin-top: 5px;">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 {% endblock %}
 
 {% block login_header %}
-    <ul class="right hide-on-med-and-down">
+    <ul class="right hide-on-small-only">
         <li><a class="modal-trigger valign-wrapper" href="#signout-modal">{{customer.AccountHolderContact.AccountName}}
             <img class="circle" src="{{ url_for('static', filename='images/isolde-profilbild.png') }}" alt="Profile Pic"></a>
         </li>
-    </ul>
-
-    <ul id="nav-mobile" class="right side-nav">
-        <li class="active valign-wrapper"><a class="modal-trigger" href="#signout-modal">Sign out</a></li>
     </ul>
 {% endblock %}
 
