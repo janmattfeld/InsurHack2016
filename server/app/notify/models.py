@@ -15,7 +15,8 @@ class Notification(Base):
         self.customer = customer_id
 
     def __repr__(self):
-        return '<Notification ' + self.notification_key + ' ' + self.customer + '>'
+        return '<Notification ' + str(self.notification_key) + ' ' + \
+                str(self.customer) + '>'
 
 
 class Customer(Base):
@@ -29,4 +30,4 @@ class Customer(Base):
         self.customer_id = id
 
     def __repr__(self):
-        return '<Customer ' + self.id + '>'
+        return '<Customer ' + str(self.id) + '>'
