@@ -8,7 +8,6 @@ body {
     background: #B0B0B1 url(../images/shaded_background.svg) bottom center;
 }
 
-
 main {
     flex: 1 0 auto;
 }
@@ -199,3 +198,8 @@ footer .material-icons {
     display: none;
 }
 
+/* Package icons */
+.package {
+    width: 100%;
+    display: block;
+}

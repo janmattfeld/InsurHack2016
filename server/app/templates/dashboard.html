@@ -1,9 +1,18 @@
 {% extends "layout.html" %}
 
 {% block modal %}
+<<<<<<< HEAD
 <div class="md-modal md-effect-14 " id="effect-14">
     <div class="md-content black">
 
+=======
+<div class="md-modal md-effect-14 " id="effect-14" style="">
+
+    <div class="md-content">
+      <div class="modal-header">
+        <h4>Alert - Collapse detected!</h4>
+      </div>
+>>>>>>> d9ad8dd7c97bbd8efc8feb72de7d3b6e5f3ef933
       <div class="modal-body">
         <h4 style="padding-bottom:20px;">Alert - Collapse detected!</h4>
         <div class="text-center">
@@ -78,7 +87,7 @@
                                     <tbody>
                                     <tr>
                                         <td>Customer since</td>
-                                        <td>11.11.2015</td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td>Last update</td>
@@ -123,7 +132,7 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td><a href="#!">Collapse Detection</a></td>
+                                        <td><a href="#!">Safe Fall</a></td>
                                     </tr>
                                     </tbody>
 
@@ -179,8 +188,13 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>Please parse here your awesome insurance packages</td>
+                                    <tr style="width: 90%    ">
+                                        <!--<td style="width: 30%"><img class=" package" src="{{ url_for('static', filename='images/car_insurance.svg') }}">
+                                            <h6 class="center-align">Car Insurance</h6></td> -->
+                                        <td style="width: 50%"><img class=" package" src="{{ url_for('static', filename='images/life_insurance.jpg') }}">
+                                            <h6 class="center-align">Life Insurance</h6></td>
+                                        <td style="width: 50%"><img class=" package" src="{{ url_for('static', filename='images/accident_insurance.png') }}">
+                                            <h6 class="center-align">Accident Insurance</h6></td>
                                     </tr>
                                     </tbody>
 
