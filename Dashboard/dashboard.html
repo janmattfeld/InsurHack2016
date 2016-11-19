@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>#Insurhack - Zurich Assistance</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materializecss/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    <link rel="icon" href="images/activity-event.png">
+</head>
+<body>
+
+<header>
+    <div class="navbar-fixed">
+        <nav class="primary-color" role="navigation">
+            <div class="nav-wrapper container">
+                <a class="brand-logo" href="#!"><i class="material-icons">directions_run</i>Zurich Assistance</a>
+                <a href="#" data-activates="nav-mobile" class="button-collapse right"><i
+                        class="material-icons">menu</i></a>
+
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="modal-trigger valign-wrapper" href="#signout-modal">Isolde Storch
+                        <img class="circle" src="images/isolde-profilbild.png" alt="Profile Pic"></a>
+                    </li>
+                </ul>
+
+                <ul id="nav-mobile" class="right side-nav">
+                    <li class="active valign-wrapper"><a class="modal-trigger" href="#signout-modal">Sign out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <div id="dashboard-content" class="container section">
+        <div class="row">
+
+            <div class="col s12 m12 l4">
+                <div class="row">
+                    <div class="col s12">
+
+                        <div class="card" style="height: 622.5px;">
+                            <div class="card-content">
+                                <table>
+                                    <!-- Stats -->
+                                    <thead>
+                                    <tr>
+                                        <th><span class="card-title truncate primary-color-text">Isolde Storch</span></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Customer since</td>
+                                        <td>11.11.2015</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Last update</td>
+                                        <td>12:31 - 02.10.16</td>
+                                    </tr>
+                                    </tbody>
+
+                                    <!-- Devices -->
+                                    <thead>
+                                    <tr>
+                                        <th><span class="card-title truncate primary-color-text">Devices</span></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="valign-wrapper"><i
+                                                class="material-icons primary-color-text">phone_android</i>- Nexus 5X
+                                        </td>
+                                        <td class="green-text">Activated</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="valign-wrapper"><i
+                                                class="material-icons primary-color-text">watch</i>-
+                                            Motorola Moto 360
+                                        </td>
+                                        <td class="red-text">Deactivated</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="valign-wrapper"><i
+                                                class="material-icons primary-color-text">watch</i>-
+                                            Garmin Vivosmart HR
+                                        </td>
+                                        <td class="red-text">Deactivated</td>
+                                    </tr>
+                                    </tbody>
+
+                                    <!-- Devices -->
+                                    <thead>
+                                    <tr>
+                                        <th><span class="card-title truncate primary-color-text">Services</span></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><a href="#!">Safe Fall</a></td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m12 l8">
+                <div class="row">
+
+                    <div class="col s12">
+                        <div class="card">
+                            <div class="card-content">
+                                <table>
+                                    <!-- Stats -->
+                                    <thead>
+                                    <tr>
+                                        <th><span class="card-title truncate primary-color-text">Connected Members</span></th>
+                                        <th class="center"><i class="material-icons valign tiny">email</i></th>
+                                        <th class="center"><i class="material-icons valign tiny">phone</i></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Robert Stark</td>
+                                        <td>robert@email.de</td>
+                                        <td>+49 (0)1776-987424</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Marvin Gorecki</td>
+                                        <td>robert@email.de</td>
+                                        <td>+49 (0)1776-987424</td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col s12">
+                        <div class="card">
+                            <div class="card-content">
+                                <table>
+                                    <!-- Stats -->
+                                    <thead>
+                                    <tr>
+                                        <th><span class="card-title truncate primary-color-text">Insurance Packages</span></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Please parse here your awesome insurance packages</td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bins -->
+                    <div class="col s12">
+                        <div id="bin-container" class="card small">
+                            <div class="card-content">
+                                <span class="card-title truncate">Past Days</span>
+                                <div id="cards-container" style="height:200px; margin-top: 5px;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="page-footer primary-color">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 l6">
+                <h5 class="white-text">Zurich Assistance</h5>
+                <p class="grey-text text-lighten-4">
+                    Zurich Assistance is an awesome framework for supporting your everyday life, allowing you to prepare
+                    for various events in advance. Automate solutions for specific activities, by triggering predefined
+                    actions.
+                </p>
+            </div>
+            <div class="col s12 l3">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="accent-color-text" href="dashboard.html">Dashboard</a></li>
+                    <li><a class="accent-color-text" href="https://github.com/">Git</a></li>
+                    <li><a class="accent-color-text" href="http://hpi.slack.com">Slack</a></li>
+                </ul>
+            </div>
+            <div id="footer-contact" class="col s12 m12 l3">
+                <h5 class="white-text">Contact</h5>
+                <ul>
+                    <li class="white-text">Zurich Assistance</li>
+                    <li class="white-text">Solmsstraße 27-37</li>
+                    <li class="white-text">60486 Frankfurt am Main</li>
+                    <li class="white-text">+49 (0)69 7115-0</li>
+                    <li class="valign-wrapper">
+                        <i class="material-icons accent-color-text valign tiny">email</i>
+                        <a class="accent-color-text" href="mailto:robertstark.berlin@yahoo.de">E-mail</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Zurich Assistance | by
+            <a class="accent-color-text" href="mailto:jan.mattfeld@student.hpi.de">Jan</a>,
+            <a class="accent-color-text" href="mailto:martin.fischer@student.hpi.de">Martin</a>,
+            <a class="accent-color-text" href="mailto:marvin.gorecki@student.hpi.de">Gorecki</a> and
+            <a class="accent-color-text" href="mailto:robert.stark@student.hpi.de">Robert</a>.
+        </div>
+    </div>
+</footer>
+
+<!-- Login Modal -->
+<div id="signout-modal" class="modal">
+    <div class="modal-content">
+        <h4 class="primary-color-text">Sign out</h4>
+        <div class="row">
+            <div class="modal-footer col s12">
+                <a href="#!"
+                   class=" modal-action modal-close waves-effect waves-green primary-color btn left">Cancel</a>
+                <a href="index.html" class=" modal-action modal-close waves-effect waves-green primary-color btn">
+                    Sign out!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--  Scripts-->
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/materializejs/materialize.js"></script>
+<script src="js/init.js"></script>
+
+<!--<script>
+    var channelToken = getUrlParam("channelToken");
+    var channelKey = "";
+</script>-->
+
+<script src="js/nosleep.js" defer></script>
+
+</body>
+</html>
