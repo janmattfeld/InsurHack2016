@@ -133,6 +133,8 @@ footer .material-icons {
 
 /* Corporate design colors */
 .primary-color {
+    background: -webkit-linear-gradient(to right, #006 , #004eb1); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #006 , #004eb1);
     background-color: #006 !important;
 }
 
