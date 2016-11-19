@@ -24,10 +24,12 @@ class Customer(Base):
 
     id = db.Column(db.Integer(), primary_key=True)
     customer_id = db.Column(db.Integer(), unique=True)
+    updated = db.Column(db.Boolean(), default=False)
     notifications = relationship('Notification')
 
-    def __init__(self, id):
+    def __init__(self, id, updated=False):
         self.customer_id = id
+        self.updated = updated
 
     def __repr__(self):
         return '<Customer ' + str(self.id) + '>'

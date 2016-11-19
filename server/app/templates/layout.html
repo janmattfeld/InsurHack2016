@@ -9,11 +9,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/materializecss/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{{ url_for('static', filename='css/component.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
 
     <link rel="icon" href="{{ url_for('static', filename='images/activity-event.png') }}">
 </head>
 <body>
-
+{% block modal %}
+{% endblock %}
 <header>
     <div class="navbar-fixed">
         <nav class="primary-color" role="navigation">
@@ -85,6 +87,7 @@
 <script src="{{ url_for('static', filename='js/jquery-2.1.1.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/materializejs/materialize.js') }}"></script>
 <script src="{{ url_for('static', filename='js/init.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.modalEffects.js') }}"></script>
 
 <!--<script>
     var channelToken = getUrlParam("channelToken");
@@ -92,6 +95,6 @@
 </script>-->
 
 <script src="{{ url_for('static', filename='js/nosleep.js') }}" defer></script>
-
+{% block scripts %} {% endblock %}
 </body>
 </html>

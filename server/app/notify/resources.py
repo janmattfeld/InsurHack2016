@@ -32,7 +32,11 @@ class Notification(Resource):
         if not self.__ensure_customer_existence(customer_id):
             abort(400, message="Customer does not exist")
         notification = Notif(notification_key, customer_id)
+        customer = Customer.query.filter_by(customer_id=customer_id).first()
+        customer.updated = True
+
         # TODO: inform dashboard and send sms
+        db.session.add(customer)
         db.session.add(notification)
         db.session.commit()
         return {}, 200

@@ -18,6 +18,7 @@ def not_found(error):
 
 from app.notify.resources import notify_bp
 from app.views.resources import dashboard_bp, home_bp
+from app.dashboard.resources import dashboard_api_bp
 
 
 app.register_blueprint(
@@ -28,6 +29,11 @@ app.register_blueprint(
 app.register_blueprint(
     dashboard_bp,
     url_prefix=('/dashboard')
+)
+
+app.register_blueprint(
+    dashboard_api_bp,
+    url_prefix=('/updated')
 )
 
 app.register_blueprint(

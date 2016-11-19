@@ -3,9 +3,11 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-
+    text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
     font-size: 13px;
+    background: #B0B0B1 url(../images/shaded_background.svg) bottom center;
 }
+
 
 main {
     flex: 1 0 auto;
