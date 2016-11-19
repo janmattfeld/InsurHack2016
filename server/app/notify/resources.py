@@ -6,6 +6,7 @@ from flask_restful import Api, Resource
 from flask.ext.restful import abort, fields, marshal_with, reqparse
 from app.notify.models import Customer
 from app.notify.models import Notification as Notif
+import requests
 
 from app.settings import Assistance
 
@@ -34,8 +35,8 @@ class Notification(Resource):
         notification = Notif(notification_key, customer_id)
         customer = Customer.query.filter_by(customer_id=customer_id).first()
         customer.updated = True
-
-        # TODO: inform dashboard and send sms
+        # send notification to mobile
+        p = requests.post('https://maker.ifttt.com/trigger/sms/with/key/pl40lZkLpcKWgD97XtCfqnsIpvspHb9G_QpfKqToC3n')
         db.session.add(customer)
         db.session.add(notification)
         db.session.commit()

@@ -4064,7 +4064,7 @@ nav .brand-logo {
   position: absolute;
   color: #fff;
   display: inline-block;
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   padding: 0;
   white-space: nowrap;
 }
@@ -4302,7 +4302,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1.64rem;
+  font-size: 1.50rem;
   line-height: 110%;
   margin: 0.82rem 0 0.656rem 0;
 }
