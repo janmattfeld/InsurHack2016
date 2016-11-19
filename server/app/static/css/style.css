@@ -174,7 +174,28 @@ footer .material-icons {
     color: black;
 }
 
-#notified {
+#effect-14 {
+    opacity: 0.77;
+}
+
+.valign-wrapper-important {
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-align-items: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+
+#notifying-services, #notifying-contacts, #notified-services, #notified-contacts {
+    min-height: 70px;
+}
+
+#notifying-services .preloader-wrapper, #notifying-contacts .preloader-wrapper {
+    margin-right: 20px;
+}
+
+#notified-services, #notified-contacts {
     display: none;
 }
 

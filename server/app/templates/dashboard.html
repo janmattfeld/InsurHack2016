@@ -1,78 +1,52 @@
 {% extends "layout.html" %}
 
 {% block modal %}
-<div class="md-modal md-effect-14 " id="effect-14" style="">
-    <div class="md-content">
-      <div class="modal-header">
-        <h4>Alert - Collapse detected!</h4>
-      </div>
-      <div class="modal-body">
-        <div id="notifying" class="text-center">
-            <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <div class="preloader-wrapper active">
-                            <div class="spinner-layer spinner-blue-only">
-                                <div class="circle-clipper left">
-                                    <div class="circle"></div>
-                                </div><div class="gap-patch">
-                                    <div class="circle"></div>
-                                </div><div class="circle-clipper right">
-                                    <div class="circle"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                       <h5>Notifying Emergency services...</h5>
-                    </td>
-                </tr>
+<div class="md-modal md-effect-14 " id="effect-14">
+    <div class="md-content black">
 
-                <tr>
-                    <td>
-                        <div class="preloader-wrapper active">
-                            <div class="spinner-layer spinner-blue-only">
-                                <div class="circle-clipper left">
-                                    <div class="circle"></div>
-                                </div><div class="gap-patch">
-                                    <div class="circle"></div>
-                                </div><div class="circle-clipper right">
-                                    <div class="circle"></div>
-                                </div>
-                            </div>
+      <div class="modal-body">
+        <h4 style="padding-bottom:20px;">Alert - Collapse detected!</h4>
+        <div class="text-center">
+
+            <div id ="notifying-services">
+                <div class="preloader-wrapper active left">
+                    <div class="spinner-layer spinner-blue-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
                         </div>
-                    </td>
-                    <td>
-                       <h5>Notifying Contacts...</h5>
-                    </td>
-                </tr>
-            </tbody>
-            </table>
+                    </div>
+                </div>
+               <h5>Notifying Emergency services...</h5>
+            </div>
+
+            <div id ="notifying-contacts">
+                <div class="preloader-wrapper active left">
+                    <div class="spinner-layer spinner-blue-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+               <h5>Notifying Contacts...</h5>
+            </div>
         </div>
 
-        <div id="notified" class="text-center">
-            <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <i class="material-icons white primary-color-text">check</i>
-                    </td>
-                    <td>
-                       <h5>Notified Emergency services.</h5>
-                    </td>
-                </tr>
+        <div id ="notified-services">
+           <i class="material-icons green-text left">check</i>
+           <h5 class="green-text">Notified Emergency services.</h5>
+        </div>
 
-                <tr>
-                    <td>
-                        <i class="material-icons white primary-color-text">check</i>
-                    </td>
-                    <td>
-                       <h5>Notified Contacts.</h5>
-                    </td>
-                </tr>
-            </tbody>
-            </table>
+        <div id ="notified-contacts">
+            <i class="material-icons green-text left">check</i>
+            <h5 class="green-text">Notified Contacts.</h5>
         </div>
 
       </div>
@@ -285,10 +259,18 @@ $(document).ready(function() {
 <script>
 function updateNotifyModal() {
     setTimeout(function(){
-        $('#notifying').replaceWith($('#notified'));
-        $('#notified').show();
+        $('#notifying-services').replaceWith($('#notified-services'));
+        $('#notified-services').show();
+        
     },
         3000
+    );
+
+        setTimeout(function(){
+        $('#notifying-contacts').replaceWith($('#notified-contacts'));
+        $('#notified-contacts').show();
+    },
+        5000
     );
 };
 </script>
