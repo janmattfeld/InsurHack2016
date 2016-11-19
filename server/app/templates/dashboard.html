@@ -98,23 +98,17 @@
                                     <!-- Stats -->
                                     <thead>
                                     <tr>
-                                        <th><span class="card-title truncate primary-color-text">{{customer.AccountHolderContact.AccountName}}</span></th>
+                                        <th><span class="card-title truncate primary-color-text">Isolde Storch</span></th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>Date of birth</td>
-                                        <td>{{customer.AccountHolderContact.DateOfBirth}}</td>
-                                    </tr>
-                                    <tr>
                                         <td>Customer since</td>
-
-                                        <td>{{customer.AccountHolderContact.CreateTime}}</td>
+                                        <td>11.11.2015</td>
                                     </tr>
                                     <tr>
                                         <td>Last update</td>
-
-                                        <td>2016-11-20</td>
+                                        <td>12:31 - 02.10.16</td>
                                     </tr>
                                     </tbody>
 
@@ -155,9 +149,10 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td><a href="#!">Safe Fall</a></td>
+                                        <td><a href="#!">Collapse Detection</a></td>
                                     </tr>
                                     </tbody>
+
                                 </table>
                             </div>
                         </div>
@@ -182,20 +177,22 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>Robert Peters</td>
+                                        <td>Robert Stark</td>
                                         <td>robert@email.de</td>
                                         <td>+49 (0)1776-987424</td>
                                     </tr>
                                     <tr>
-                                        <td>Marvin Peters</td>
-                                        <td>marvin@email.de</td>
-                                        <td>+49 (0)1776-987425</td>
+                                        <td>Marvin Gorecki</td>
+                                        <td>robert@email.de</td>
+                                        <td>+49 (0)1776-987424</td>
                                     </tr>
                                     </tbody>
+
                                 </table>
                             </div>
                         </div>
                     </div>
+
 
                     <div class="col s12">
                         <div class="card">
@@ -283,16 +280,16 @@ $(document).ready(function() {
                complete: poll });
     }, 2000);
     })();
-
-    (function updateNotifyModal() {
-        setTimeout(
-        function(){
-            $('#notifying').replaceWith($('#notifying'));
-            $('#notified').show();
-        },
-            3000
-        );
-    });
 });
+</script>
+<script>
+function updateNotifyModal() {
+    setTimeout(function(){
+        $('#notifying').replaceWith($('#notified'));
+        $('#notified').show();
+    },
+        3000
+    );
+};
 </script>
 {% endblock %}
