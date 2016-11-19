@@ -16,27 +16,9 @@ def not_found(error):
     return flask.jsonify(**err)
 
 
-from app.blog.resources import blog_bp
-from app.auth.resources import auth_bp
-from app.pages.resources import page_bp
 from app.notify.resources import notify_bp
 from app.views.resources import dashboard_bp, home_bp
 
-
-app.register_blueprint(
-    blog_bp,
-    url_prefix='/blog'
-)
-
-app.register_blueprint(
-    auth_bp,
-    url_prefix='/auth'
-)
-
-app.register_blueprint(
-    page_bp,
-    url_prefix='/page'
-)
 
 app.register_blueprint(
     notify_bp,
