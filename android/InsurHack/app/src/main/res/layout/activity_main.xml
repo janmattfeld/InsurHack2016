@@ -11,7 +11,69 @@
     tools:context="net.steppschuh.insurhack.MainActivity">
 
     <TextView
+        android:id="@+id/headingTextView"
+        style="@style/Base.TextAppearance.AppCompat.Display1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:textColor="@android:color/primary_text_light"
+        android:textSize="30sp"
+        android:text="Is everything alright?" />
+
+    <LinearLayout
+        android:id="@+id/buttonContainerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headingTextView"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/negativeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headingTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorNegative"
+            android:padding="16dp"
+            android:text="No,\nI need help"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headingTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorPositive"
+            android:padding="16dp"
+            android:text="Yes,\nI\'m fine"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="If you don\'t respond in time, we\'ll assume you need help and get in touch with your emergency contacts." />
+
+    <TextView
+        android:id="@+id/countdownTextView"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/descriptionTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="15" />
+
 </RelativeLayout>
