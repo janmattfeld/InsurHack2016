@@ -1,79 +1,52 @@
 {% extends "layout.html" %}
 
 {% block modal %}
-<div class="md-modal md-effect-14 " id="effect-14" style="">
+<div class="md-modal md-effect-14 " id="effect-14">
+    <div class="md-content black">
 
-    <div class="md-content">
-      <div class="modal-header">
-        <h4>Alert - Collapse detected!</h4>
-      </div>
       <div class="modal-body">
-        <div id="notifying" class="text-center">
-            <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <div class="preloader-wrapper active">
-                            <div class="spinner-layer spinner-blue-only">
-                                <div class="circle-clipper left">
-                                    <div class="circle"></div>
-                                </div><div class="gap-patch">
-                                    <div class="circle"></div>
-                                </div><div class="circle-clipper right">
-                                    <div class="circle"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                       <h5>Notifying Emergency services...</h5>
-                    </td>
-                </tr>
+        <h4 style="padding-bottom:20px;">Alert - Collapse detected!</h4>
+        <div class="text-center">
 
-                <tr>
-                    <td>
-                        <div class="preloader-wrapper active">
-                            <div class="spinner-layer spinner-blue-only">
-                                <div class="circle-clipper left">
-                                    <div class="circle"></div>
-                                </div><div class="gap-patch">
-                                    <div class="circle"></div>
-                                </div><div class="circle-clipper right">
-                                    <div class="circle"></div>
-                                </div>
-                            </div>
+            <div id ="notifying-services">
+                <div class="preloader-wrapper active left">
+                    <div class="spinner-layer spinner-blue-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
                         </div>
-                    </td>
-                    <td>
-                       <h5>Notifying Contacts...</h5>
-                    </td>
-                </tr>
-            </tbody>
-            </table>
+                    </div>
+                </div>
+               <h5>Notifying Emergency services...</h5>
+            </div>
+
+            <div id ="notifying-contacts">
+                <div class="preloader-wrapper active left">
+                    <div class="spinner-layer spinner-blue-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+               <h5>Notifying Contacts...</h5>
+            </div>
         </div>
 
-        <div id="notified" class="text-center">
-            <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <i class="material-icons white primary-color-text">check</i>
-                    </td>
-                    <td>
-                       <h5>Notified Emergency services.</h5>
-                    </td>
-                </tr>
+        <div id ="notified-services">
+           <i class="material-icons green-text left">check</i>
+           <h5 class="green-text">Notified Emergency services.</h5>
+        </div>
 
-                <tr>
-                    <td>
-                        <i class="material-icons white primary-color-text">check</i>
-                    </td>
-                    <td>
-                       <h5>Notified Contacts.</h5>
-                    </td>
-                </tr>
-            </tbody>
-            </table>
+        <div id ="notified-contacts">
+            <i class="material-icons green-text left">check</i>
+            <h5 class="green-text">Notified Contacts.</h5>
         </div>
 
       </div>
@@ -88,31 +61,38 @@
 <div id="dashboard-content" class="container section">
 
         <div class="row">
+            <div class="col s12">
 
-            <div class="col s12 m12 l4">
-                <div class="row">
-                    <div class="col s12">
-
-                        <div class="card" style="height: 622.5px;">
-                            <div class="card-content">
+                <div class="card">
+                    <div class="card-content row">
+                        <div class="row">
+                            <div class="col s12 l6">
                                 <table>
-                                    <!-- Stats -->
+                                    <!-- User Profile -->
                                     <thead>
                                     <tr>
-                                        <th><span class="card-title truncate primary-color-text">Isolde Storch</span></th>
+                                        <th><span class="card-title truncate primary-color-text">{{customer.AccountHolderContact.AccountName}}</span></th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
+                                        <td>Date of birth</td>
+                                        <td>{{customer.AccountHolderContact.DateOfBirth}}</td>
+                                    </tr>
+                                    <tr>
                                         <td>Customer since</td>
-                                        <td></td>
+                                        <td>{{customer.AccountHolderContact.CreateTime}}</td>
                                     </tr>
                                     <tr>
                                         <td>Last update</td>
-                                        <td>12:31 - 02.10.16</td>
+                                        <td>2016-11-20</td>
                                     </tr>
                                     </tbody>
+                                </table>
+                            </div>
 
+                            <div class="col s12 l6">
+                                <table>
                                     <!-- Devices -->
                                     <thead>
                                     <tr>
@@ -142,18 +122,6 @@
                                     </tr>
                                     </tbody>
 
-                                    <!-- Devices -->
-                                    <thead>
-                                    <tr>
-                                        <th><span class="card-title truncate primary-color-text">Services</span></th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td><a href="#!">Safe Fall</a></td>
-                                    </tr>
-                                    </tbody>
-
                                 </table>
                             </div>
                         </div>
@@ -161,76 +129,59 @@
                 </div>
             </div>
 
-            <div class="col s12 m12 l8">
-                <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <table>
+                            <!-- Stats -->
+                            <thead>
+                            <tr>
+                                <th><span class="card-title truncate primary-color-text">Connected Members</span></th>
+                                <th class="center"><i class="material-icons valign tiny">email</i></th>
+                                <th class="center"><i class="material-icons valign tiny">phone</i></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Robert Peters</td>
+                                <td class="center">robert.peters@email.de</td>
+                                <td class="center">+49 (0)1776-987424</td>
+                            </tr>
+                            <tr>
+                                <td>Dr. Marvin Strolch</td>
+                                <td class="center">marvin.dr@gmail.de</td>
+                                <td class="center">+49 (0)1775-987415</td>
+                            </tr>
+                            </tbody>
 
-                    <div class="col s12">
-                        <div class="card">
-                            <div class="card-content">
-                                <table>
-                                    <!-- Stats -->
-                                    <thead>
-                                    <tr>
-                                        <th><span class="card-title truncate primary-color-text">Connected Members</span></th>
-                                        <th class="center"><i class="material-icons valign tiny">email</i></th>
-                                        <th class="center"><i class="material-icons valign tiny">phone</i></th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>Robert Stark</td>
-                                        <td>robert@email.de</td>
-                                        <td>+49 (0)1776-987424</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Marvin Gorecki</td>
-                                        <td>robert@email.de</td>
-                                        <td>+49 (0)1776-987424</td>
-                                    </tr>
-                                    </tbody>
-
-                                </table>
-                            </div>
-                        </div>
+                        </table>
                     </div>
+                </div>
+            </div>
 
 
-                    <div class="col s12">
-                        <div class="card">
-                            <div class="card-content">
-                                <table>
-                                    <!-- Stats -->
-                                    <thead>
-                                    <tr>
-                                        <th><span class="card-title truncate primary-color-text">Insurance Packages</span></th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr style="width: 90%    ">
-                                        <!--<td style="width: 30%"><img class=" package" src="{{ url_for('static', filename='images/car_insurance.svg') }}">
-                                            <h6 class="center-align">Car Insurance</h6></td> -->
-                                        <td style="width: 50%"><img class=" package" src="{{ url_for('static', filename='images/life_insurance.jpg') }}">
-                                            <h6 class="center-align">Life Insurance</h6></td>
-                                        <td style="width: 50%"><img class=" package" src="{{ url_for('static', filename='images/accident_insurance.png') }}">
-                                            <h6 class="center-align">Accident Insurance</h6></td>
-                                    </tr>
-                                    </tbody>
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <table>
+                            <!-- Stats -->
+                            <thead>
+                            <tr>
+                                <th><span class="card-title truncate primary-color-text">Insurance Packages</span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr style="width: 90%    ">
+                                <!--<td style="width: 30%"><img class=" package" src="{{ url_for('static', filename='images/car_insurance.svg') }}">
+                                    <h6 class="center-align">Car Insurance</h6></td> -->
+                                <td style="width: 50%"><img class=" package" src="{{ url_for('static', filename='images/life_insurance.jpg') }}">
+                                    <h6 class="center-align">Life Insurance</h6></td>
+                                <td style="width: 50%"><img class=" package" src="{{ url_for('static', filename='images/accident_insurance.png') }}">
+                                    <h6 class="center-align">Accident Insurance</h6></td>
+                            </tr>
+                            </tbody>
 
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bins -->
-                    <div class="col s12">
-                        <div id="bin-container" class="card small">
-                            <div class="card-content">
-                                <span class="card-title truncate">Past Days</span>
-                                <div id="cards-container" style="height:200px; margin-top: 5px;">
-
-                                </div>
-                            </div>
-                        </div>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -239,14 +190,10 @@
 {% endblock %}
 
 {% block login_header %}
-    <ul class="right hide-on-med-and-down">
-        <li><a class="modal-trigger valign-wrapper" href="#signout-modal">Isolde Storch
+    <ul class="right hide-on-small-only">
+        <li><a class="modal-trigger valign-wrapper" href="#signout-modal">{{customer.AccountHolderContact.AccountName}}
             <img class="circle" src="{{ url_for('static', filename='images/isolde-profilbild.png') }}" alt="Profile Pic"></a>
         </li>
-    </ul>
-
-    <ul id="nav-mobile" class="right side-nav">
-        <li class="active valign-wrapper"><a class="modal-trigger" href="#signout-modal">Sign out</a></li>
     </ul>
 {% endblock %}
 
@@ -291,10 +238,18 @@ $(document).ready(function() {
 <script>
 function updateNotifyModal() {
     setTimeout(function(){
-        $('#notifying').replaceWith($('#notified'));
-        $('#notified').show();
+        $('#notifying-services').replaceWith($('#notified-services'));
+        $('#notified-services').show();
+
     },
         3000
+    );
+
+        setTimeout(function(){
+        $('#notifying-contacts').replaceWith($('#notified-contacts'));
+        $('#notified-contacts').show();
+    },
+        5000
     );
 };
 </script>
