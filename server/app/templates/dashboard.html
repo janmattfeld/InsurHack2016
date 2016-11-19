@@ -7,10 +7,10 @@
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/materializecss/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{{ url_for('static', filename='css/materializecss/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-    <link rel="icon" href="images/activity-event.png">
+    <link rel="icon" href="{{ url_for('static', filename='images/activity-event.png') }}">
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
                 <ul class="right hide-on-med-and-down">
                     <li><a class="modal-trigger valign-wrapper" href="#signout-modal">Isolde Storch
-                        <img class="circle" src="images/isolde-profilbild.png" alt="Profile Pic"></a>
+                        <img class="circle" src="{{ url_for('static', filename='images/isolde-profilbild.png') }}" alt="Profile Pic"></a>
                     </li>
                 </ul>
 
@@ -199,7 +199,7 @@
             <div class="col s12 l3">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                    <li><a class="accent-color-text" href="dashboard.html">Dashboard</a></li>
+                    <li><a class="accent-color-text" href="dashboard">Dashboard</a></li>
                     <li><a class="accent-color-text" href="https://github.com/">Git</a></li>
                     <li><a class="accent-color-text" href="http://hpi.slack.com">Slack</a></li>
                 </ul>
@@ -247,16 +247,16 @@
 
 
 <!--  Scripts-->
-<script src="js/jquery-2.1.1.min.js"></script>
-<script src="js/materializejs/materialize.js"></script>
-<script src="js/init.js"></script>
+<script src="{{ url_for('static', filename='js/jquery-2.1.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/materializejs/materialize.js') }}"></script>
+<script src="{{ url_for('static', filename='js/init.js') }}"></script>
 
 <!--<script>
     var channelToken = getUrlParam("channelToken");
     var channelKey = "";
 </script>-->
 
-<script src="js/nosleep.js" defer></script>
+<script src="{{ url_for('static', filename='js/nosleep.js') }}" defer></script>
 
 </body>
 </html>

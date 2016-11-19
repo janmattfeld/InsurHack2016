@@ -5,6 +5,8 @@ from flask.ext.restful import abort
 from flask.ext.migrate import Migrate
 from flask.ext.cors import CORS
 
+from config import DASHBOARD_ROOT
+
 app = flask.Flask(__name__)
 app.config.from_object('config')
 db = SQLAlchemy(app)
@@ -22,6 +24,8 @@ from app.blog.resources import blog_bp
 from app.auth.resources import auth_bp
 from app.pages.resources import page_bp
 from app.notify.resources import notify_bp
+from app.views.resources import dashboard_bp, home_bp
+
 
 app.register_blueprint(
     blog_bp,
@@ -41,4 +45,14 @@ app.register_blueprint(
 app.register_blueprint(
     notify_bp,
     url_prefix='/notify'
+)
+
+app.register_blueprint(
+    dashboard_bp,
+    url_prefix=('/dashboard')
+)
+
+app.register_blueprint(
+    home_bp,
+    url_prefix=('/')
 )
